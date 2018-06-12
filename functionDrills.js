@@ -1,17 +1,17 @@
 'use strict';
 
 function repeat(fn, n){
-    for(let i = 0; i < n; i++){
-        fn();
-    }
+  for(let i = 0; i < n; i++){
+    fn();
+  }
 }
 
 function hello(){
-    console.log('Hello squirrels');
+  console.log('Hello squirrels');
 }
 
 function goodbye(){
-    console.log('Goodbye swirls');
+  console.log('Goodbye swirls');
 }
 
 repeat(hello, 5);
@@ -22,8 +22,8 @@ repeat(goodbye, 5);
 const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
 
 const filteredNames = filter(myNames, function(name) {
-    // This is a "predicate function" - it's a function that only returns a boolean
-    return name[0] === 'R';
+  // This is a "predicate function" - it's a function that only returns a boolean
+  return name[0] === 'R';
 });
 
 console.log(filteredNames); // => ['Rich', 'Ray']
@@ -31,13 +31,13 @@ console.log(filteredNames); // => ['Rich', 'Ray']
 
 // TASK: DEFINE YOUR FILTER FUNCTION BELOW:
 function filter(arr, fn) {
-    let newArray = [];
+  let newArray = [];
     
-    for(let i = 0; i < arr.length; i++){
-        if (fn(arr[i]) === true){
-            newArray.push(arr[i]);
-        }
+  for(let i = 0; i < arr.length; i++){
+    if (fn(arr[i]) === true){
+      newArray.push(arr[i]);
     }
+  }
 
-    return newArray;
+  return newArray;
 }
